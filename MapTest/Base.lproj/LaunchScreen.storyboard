@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +21,38 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo2" translatesAutoresizingMaskIntoConstraints="NO" id="9lh-va-N5T">
+                                <rect key="frame" x="40" y="151" width="295" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9lh-va-N5T" secondAttribute="height" multiplier="273:128" id="A4i-0O-5gh"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slogan2" translatesAutoresizingMaskIntoConstraints="NO" id="cs2-XF-iWA">
+                                <rect key="frame" x="67" y="344" width="240" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cs2-XF-iWA" secondAttribute="height" multiplier="80:17" id="9DT-7J-7wy"/>
+                                    <constraint firstAttribute="height" constant="51" id="AEp-47-7pf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cs2-XF-iWA" firstAttribute="top" secondItem="9lh-va-N5T" secondAttribute="bottom" constant="55" id="3QK-rg-Gzq"/>
+                            <constraint firstItem="cs2-XF-iWA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="D86-Yp-0JR"/>
+                            <constraint firstItem="9lh-va-N5T" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Lix-BW-pfs"/>
+                            <constraint firstItem="9lh-va-N5T" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" constant="-80" id="ZIq-8d-AJW"/>
+                            <constraint firstItem="9lh-va-N5T" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="131" id="da0-V5-Tty"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo2" width="2280" height="1837"/>
+        <image name="Slogan2" width="2150" height="371"/>
+    </resources>
 </document>

@@ -1,26 +1,140 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7w6-UJ-iRh">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jHc-pw-00A">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFZ-i2-Adh">
+                                <rect key="frame" x="0.0" y="418" width="320" height="150"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oAk-7l-ikd">
+                                        <rect key="frame" x="10" y="10" width="300" height="130"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.45098039220000002" blue="0.53725490200000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="oAk-7l-ikd" firstAttribute="centerX" secondItem="JFZ-i2-Adh" secondAttribute="centerX" id="DWj-l9-2GF"/>
+                                    <constraint firstItem="oAk-7l-ikd" firstAttribute="height" secondItem="JFZ-i2-Adh" secondAttribute="height" constant="-20" id="EIv-qr-xMS"/>
+                                    <constraint firstItem="oAk-7l-ikd" firstAttribute="width" secondItem="JFZ-i2-Adh" secondAttribute="width" constant="-20" id="nye-Oj-lzv"/>
+                                    <constraint firstItem="oAk-7l-ikd" firstAttribute="centerY" secondItem="JFZ-i2-Adh" secondAttribute="centerY" id="vFn-4y-L0m"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jHc-pw-00A" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="CVH-JY-nfm"/>
+                            <constraint firstItem="JFZ-i2-Adh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="HWd-oi-kVz"/>
+                            <constraint firstItem="JFZ-i2-Adh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="398" id="LRn-27-4lI"/>
+                            <constraint firstItem="JFZ-i2-Adh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TYW-lJ-G3t"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JFZ-i2-Adh" secondAttribute="bottom" id="YTU-K5-t3l"/>
+                            <constraint firstItem="jHc-pw-00A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ea5-dP-LOx"/>
+                            <constraint firstItem="jHc-pw-00A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kAI-nD-2bU"/>
+                            <constraint firstItem="jHc-pw-00A" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="uhd-9Y-BnQ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wYI-XD-IKq"/>
+                    <connections>
+                        <outlet property="InformationLabel" destination="oAk-7l-ikd" id="AUk-x1-tYB"/>
+                        <outlet property="mapView" destination="jHc-pw-00A" id="jo5-3Q-lK5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1074.375" y="138.38028169014083"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kj8-SN-Lvf">
+            <objects>
+                <viewController id="7w6-UJ-iRh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Se0-OW-dPG"/>
+                        <viewControllerLayoutGuide type="bottom" id="7BA-av-W2Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="20x-OQ-hFm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="Mb1-JC-sN1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="468"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="vND-vw-bf7">
+                                <rect key="frame" x="0.0" y="110" width="320" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vND-vw-bf7" secondAttribute="height" multiplier="275:128" id="Qsr-Aw-OgL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="565-KL-MpY">
+                                <rect key="frame" x="98" y="523" width="124" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9OW-sf-OCE"/>
+                                    <constraint firstAttribute="width" secondItem="565-KL-MpY" secondAttribute="height" multiplier="31:10" id="cTN-lw-IIN"/>
+                                </constraints>
+                                <state key="normal" image="Find Out">
+                                    <color key="titleColor" red="0.35429197549819946" green="0.79340881109237671" blue="0.91774290800094604" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="WdP-Jp-SJ6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYu-8U-hm6">
+                                <rect key="frame" x="98" y="479" width="124" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eYu-8U-hm6" secondAttribute="height" multiplier="31:10" id="V8R-6N-4EH"/>
+                                    <constraint firstAttribute="height" constant="40" id="fDp-Mq-Tu0"/>
+                                </constraints>
+                                <state key="normal" image="Test My Area">
+                                    <color key="titleColor" red="0.35429197550000002" green="0.79340881110000006" blue="0.91774290800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.023529411760000001" green="0.45098039220000002" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="565-KL-MpY" firstAttribute="top" secondItem="eYu-8U-hm6" secondAttribute="bottom" constant="4" id="2t1-oL-jDW"/>
+                            <constraint firstItem="7BA-av-W2Z" firstAttribute="top" secondItem="565-KL-MpY" secondAttribute="bottom" constant="5" id="ACO-xP-sYa"/>
+                            <constraint firstItem="Mb1-JC-sN1" firstAttribute="top" secondItem="Se0-OW-dPG" secondAttribute="bottom" constant="-20" id="Cg4-Gn-kxK"/>
+                            <constraint firstItem="vND-vw-bf7" firstAttribute="width" secondItem="20x-OQ-hFm" secondAttribute="width" id="Jgj-Id-NHh"/>
+                            <constraint firstItem="vND-vw-bf7" firstAttribute="centerX" secondItem="20x-OQ-hFm" secondAttribute="centerX" id="KT2-jo-XSV"/>
+                            <constraint firstItem="vND-vw-bf7" firstAttribute="top" secondItem="Se0-OW-dPG" secondAttribute="bottom" constant="90" id="NDB-tI-1fj"/>
+                            <constraint firstItem="Mb1-JC-sN1" firstAttribute="height" secondItem="20x-OQ-hFm" secondAttribute="height" constant="-100" id="NyX-Zs-Y7f"/>
+                            <constraint firstItem="Mb1-JC-sN1" firstAttribute="width" secondItem="20x-OQ-hFm" secondAttribute="width" id="PL2-NZ-DUM"/>
+                            <constraint firstItem="eYu-8U-hm6" firstAttribute="centerX" secondItem="20x-OQ-hFm" secondAttribute="centerX" id="Wg1-gB-gaN"/>
+                            <constraint firstItem="565-KL-MpY" firstAttribute="centerX" secondItem="20x-OQ-hFm" secondAttribute="centerX" id="a5u-XJ-JYI"/>
+                            <constraint firstItem="Mb1-JC-sN1" firstAttribute="centerX" secondItem="20x-OQ-hFm" secondAttribute="centerX" id="lK0-mE-2iw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYz-SE-DDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110.625" y="137.32394366197184"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Find Out" width="522" height="171"/>
+        <image name="LaunchScreen" width="1066" height="1687"/>
+        <image name="Logo" width="820" height="416"/>
+        <image name="Test My Area" width="522" height="161"/>
+    </resources>
 </document>
