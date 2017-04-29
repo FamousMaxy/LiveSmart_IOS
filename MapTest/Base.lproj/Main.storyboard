@@ -28,7 +28,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFZ-i2-Adh">
                                 <rect key="frame" x="0.0" y="418" width="320" height="150"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oAk-7l-ikd">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap any pin to get the required information" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oAk-7l-ikd">
                                         <rect key="frame" x="10" y="10" width="300" height="130"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
